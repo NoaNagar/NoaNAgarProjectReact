@@ -26,28 +26,6 @@ const SandboxPage = () => {
       .catch((err) => {});
   }, []);
 
-  // const handleDeleteCard = async (_id) => {
-  //   try {
-  //     const { data } = await axios.delete(
-  //       "https://monkfish-app-z9uza.ondigitalocean.app/bcard2/users/" + _id
-  //     );
-  //     setUserFromServer((userFromServerCopy) =>
-  //       userFromServerCopy.filter((user) => user._id !== _id)
-  //     );
-  //   } catch (err) {
-  //     toast.error(err.response.data, {
-  //       position: "top-right",
-  //       autoClose: 5000,
-  //       hideProgressBar: false,
-  //       closeOnClick: true,
-  //       pauseOnHover: true,
-  //       draggable: true,
-  //       progress: undefined,
-  //       theme: "colored",
-  //     });
-  //   }
-  // };
-
   return (
     <Fragment>
       <Typography variant="h4" sx={{ mt: 12, mb: 2 }}>
@@ -114,13 +92,6 @@ const SandboxPage = () => {
                   >{`zip: `}</Typography>
                   <Typography>{item.address.zip}</Typography>
                 </Box>
-                <IconButton
-                  className="deleteIcon"
-                  sx={{ mr: -2 }}
-                  // onClick={handleDeleteCard}
-                >
-                  <DeleteIcon />
-                </IconButton>
               </AccordionDetails>
             </Accordion>{" "}
           </Grid>
